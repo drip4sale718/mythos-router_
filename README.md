@@ -2,7 +2,7 @@
 <img src="assets/banner.png" alt="Mythos Router Banner" width="864" />
 
 [![CodeQL](https://github.com/thewaltero/mythos-router/actions/workflows/github-code-scanning/codeql/badge.svg?branch=main)](https://github.com/thewaltero/mythos-router/actions/workflows/github-code-scanning/codeql)
-[![Node.js](https://img.shields.io/badge/Node.js-22+-339933?style=flat-square&logo=node.js&logoColor=white)](https://nodejs.org)
+[![Node.js](https://img.shields.io/badge/Node.js-22.12+-339933?style=flat-square&logo=node.js&logoColor=white)](https://nodejs.org)
 [![TypeScript](https://img.shields.io/badge/TypeScript-6.0-3178C6?style=flat-square&logo=typescript&logoColor=white)](https://typescriptlang.org)
 [![Claude](https://img.shields.io/badge/Claude-Opus_5-cc785c?style=flat-square)](https://anthropic.com)
 [![$MYTHOS on Uniswap](https://img.shields.io/badge/%24MYTHOS-on_Uniswap-cc785c?style=flat-square&labelColor=1a1a2e)](https://app.uniswap.org/swap?outputCurrency=0xb942b75a602fa318ac091370d93d9143ba345ba3&chain=base)
@@ -102,7 +102,7 @@ As memory approaches capacity, the `dream` command delegates a compression phase
 
 ## Installation
 
-> **Node.js Version Requirement:** The CLI requires **Node.js 22+** (enforced via `engines` and tested in CI on Node 22 and 24). The advanced SQLite-backed features (Telemetry Dashboard, Deterministic Caching, and High-Performance Memory Index) require **Node.js 22.5.0+** specifically; on Node 22.0–22.4 these features safely degrade with a warning without crashing the router.
+> **Node.js Version Requirement:** The CLI requires **Node.js 22.12+** (enforced via `engines` and tested in CI on Node 22 and 24). The advanced SQLite-backed features (Telemetry Dashboard, Deterministic Caching, and High-Performance Memory Index) use `node:sqlite`; if it is unavailable in your Node.js build, these features safely degrade with a warning without crashing the router.
 
 ### Quick Start (npm)
 

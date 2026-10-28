@@ -7,6 +7,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [Unreleased]
+
+### Changed
+
+- Upgraded `@anthropic-ai/sdk` to 1.x, `commander` to 15.x, and TypeScript to 7.x.
+- Minimum supported Node.js is now 22.12.0 (required by `commander` 15); `engines`, `mythos doctor`, and the docs reflect this.
+
+### Fixed
+
+- The SWD concurrency-drift test no longer leaves an unrecovered transaction journal in the repository's `.mythos/transactions`, which made `mythos doctor` fail after running the test suite.
+- `AGENTS.md` stated Node.js 20+ instead of the actual minimum.
+
+---
+
 ## [1.23.0] - 2026.07.11
 
 ### Added

@@ -122,6 +122,7 @@ describe('SWDEngine (Production v1 API)', () => {
     writeFileSync(fileA, 'initial', 'utf-8');
 
     const engine = new SWDEngine({
+      rootDir: testDir,
       strict: true,
       enableRollback: true,
       onVerify: () => {
