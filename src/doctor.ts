@@ -129,10 +129,10 @@ export function runDoctor(options: DoctorOptions = {}): DoctorReport {
 }
 
 function checkNodeVersion(): DoctorCheck {
-  const major = Number.parseInt(process.versions.node.split('.')[0] ?? '0', 10);
-  return major >= 22
-    ? pass('node-version', 'Node.js version', `${process.versions.node} satisfies the Node.js 22+ requirement.`)
-    : fail('node-version', 'Node.js version', `${process.versions.node} is unsupported; Node.js 22+ is required.`);
+  const [major = 0, minor = 0] = process.versions.node.split('.').map((part) => Number.parseInt(part, 10));
+  return major > 22 || (major === 22 && minor >= 12)
+    ? pass('node-version', 'Node.js version', `${process.versions.node} satisfies the Node.js 22.12+ requirement.`)
+    : fail('node-version', 'Node.js version', `${process.versions.node} is unsupported; Node.js 22.12+ is required.`);
 }
 
 function checkWorkspaceAccess(rootDir: string): DoctorCheck {

@@ -3,7 +3,7 @@
 ## Project Identity
 - **Name**: mythos-router
 - **Type**: CLI power tool (local-first, zero-slop)
-- **Stack**: TypeScript on Node.js 20+ (ESM, `tsx` for dev)
+- **Stack**: TypeScript on Node.js 22.12+ (ESM, `tsx` for dev)
 
 ## Architecture
 - `src/mcp-config.ts` - Paste-ready MCP client configuration helper
